@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+         <div class="logo"><a href="#">CODER</a></div>
+         <input type="checkbox" id="click">
+
+         <nav>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+         </nav>
+
+         <label for="click" class="menu-btn">
+            <i class='bx bx-menu'></i>
+         </label>
+    </header>
+
+    <section class="home">
+
+          <div class="home-text">
+              <h1>Codeby <span>PANDEY</span></h1>
+              <div id="scroll-container">
+                <div id="scroll-text">
+                    <p> <span class="span-4">// menu</span></p>
+
+                    <p> <span class="span-1">let</span> menu <span class="span-3">=</span> <span class="span-2">querySelector</span> ( <span class="span-6">'.menu-icon'</span> );</p>
+                    <p> <span class="span-1">let</span> navbar <span class="span-3">=</span> <span class="span-2">querySelector</span>( <span class="span-6">'.navbar'</span> ) </p> 
+
+                    <p>menu. <span class="span-2">onclick</span> <span class="span-3">=</span> () <span class="span-3">=></span> {</p>
+                    <p>menu.<span class="span-3">classList</span>. <span class="span-2">toggle</span>( <span class="span-6">'move'</span> );</p>
+                    <p>navbar.<span class="span-3">classList</span>.<span class="span-2">toggle</span>( <span class="span-6">'open-menu'</span> )</p>
+                    <p>};</p>
+
+                    <p> <span class="span-4">// close menu on page scroll</span> </p>
+                     <p> window.<span class="span-2">onscroll</span> <span class="span-3">=</span> () <span class="span-3">=></span> {</p>
+                        <p>menu.<span class="span-3">classList</span>.<span class="span-2">remove</span>( <span class="span-6">'move'</span> );</p>
+                        <p>avbar.<span class="span-3">classList</span>.<span class="span-2">remove</span>( <span class="span-6">'open-menu'</span> )</p>
+
+                    <p>};</p>
+
+                    <p> <span class="span-4">// scroll reveal animation</span> </p>
+
+                    <p> <span class="span-1">const</span> animate <span class="span-3">=</span> <span class="span-5">ScrollReveal</span>({</p>
+
+                       <p> <span class="span-3">origin</span>: ( <span class="span-6">'top'</span> ),</p>
+                       <p><span class="span-3">distance</span>: ( <span class="span-6">'60px'</span> ),</p>
+                       <p><span class="span-3">duration</span>: <span class="span-3">2500</span>,</p> 
+                       <p><span class="span-3">delay</span>: <span class="span-3">400</span>,</p> 
+                    <p>})</p>
+                    
+                    <p>animate.<span class="span-2">reveal</span>( <span class="span-6">'.nav, .heading'</span> );</p>
+                    <p>animate.<span class="span-2">reveal</span>( <span class="span-6">"".home-img img"</span> ), {<span class="span-3">origin</span>: ( <span class="span-6">"right"</span> });</p>
+                    <p>animate.<span class="span-2">reveal</span>( <span class="span-6"> ".input-form"</span> ), {<span class="span-3">origin</span>: ( <span class="span-6">"bottom"</span> });</p>
+                    <p>animate.<span class="span-2">reveal</span>( <span class="span-6">".trend-box, .rentals-box, .team-content, .t-box, .newsletter",</span> ), {<span class="span-3">interval: 100</span>});</p></div>
+            </div>
+
+            <div class="btn">
+                <a class="btn1" href="#">Hire me</a>
+                <a class="btn2" href="#">Download cv</a>
+            </div>
+
+            <div class="social">
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-linkedin' ></i>
+                <i class='bx bxl-github' ></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+
+          </div>
+
+        <div class="image-container">
+            <img src="home.jpg" alt="">
+        </div>
+        
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
